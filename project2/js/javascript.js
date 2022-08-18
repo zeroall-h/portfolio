@@ -2,6 +2,27 @@ const header = document.querySelector("header");
 const h1 = document.querySelector("h1");
 const main = document.querySelector("main");
 
+// location 토글
+$("#officeBtn").on("click", function (e) {
+  e.preventDefault();
+  $("#officeBtn").removeClass("line");
+  $("#factoryBtn").removeClass("line");
+  $("#officeContents").removeClass("on");
+  $("#factoryContents").removeClass("on");
+  $("#officeContents").addClass("on");
+  $(this).addClass("line");
+  $("#map1").style.display = "none";
+});
+$("#factoryBtn").on("click", function () {
+  $("#officeBtn").removeClass("line");
+  $("#factoryBtn").removeClass("line");
+  $("#officeContents").removeClass("on");
+  $("#factoryContents").removeClass("on");
+  $("#factoryContents").addClass("on");
+  $(this).addClass("line");
+  $("#map").style.display = "none";
+});
+
 addEventListener("scroll", () => {
   if (scrollY > h1.offsetHeight) {
     header.classList.add("active");
@@ -10,21 +31,6 @@ addEventListener("scroll", () => {
     header.classList.remove("active");
     main.classList.remove("active");
   }
-});
-
-const factory = document.querySelector("#factoryBtn");
-const office = document.querySelector("#officeBtn");
-const map1 = document.querySelector("#map1");
-
-factory.addEventListener("click", (e) => {
-  e.preventDefault();
-  map.style.display = "none";
-  map1.classList.toggle("on");
-});
-office.addEventListener("click", (e) => {
-  e.preventDefault();
-  map.classList.toggle("invisible");
-  map1.classList.remove("on");
 });
 
 // kakao map 실행코드
@@ -53,23 +59,3 @@ var infowindow = new kakao.maps.InfoWindow({
 });
 // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 infowindow.open(map, marker);
-
-// location 토글
-$("#officeBtn").on("click", function (e) {
-  e.preventDefault();
-  $("#officeBtn").removeClass("line");
-  $("#factoryBtn").removeClass("line");
-  $("#officeContents").removeClass("on");
-  $("#factoryContents").removeClass("on");
-  $("#officeContents").addClass("on");
-  $(this).addClass("line");
-});
-$("#factoryBtn").on("click", function (e) {
-  e.preventDefault();
-  $("#officeBtn").removeClass("line");
-  $("#factoryBtn").removeClass("line");
-  $("#officeContents").removeClass("on");
-  $("#factoryContents").removeClass("on");
-  $("#factoryContents").addClass("on");
-  $(this).addClass("line");
-});

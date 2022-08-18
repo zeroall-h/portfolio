@@ -488,6 +488,7 @@ main .txt_box .small_txt {
   font-weight: 700;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 #map {
   margin: 40px 0;
