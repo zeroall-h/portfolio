@@ -509,7 +509,10 @@ main .txt_box .small_txt {
   height: 84px;
   margin: 20px 40px;
 }
-.location .office li:nth-child(1) {
+.location .office #officeBtn.line {
+  border-bottom: 2px solid #000;
+}
+.location .office #factoryBtn.line {
   border-bottom: 2px solid #000;
 }
 
@@ -521,6 +524,18 @@ main .txt_box .small_txt {
   font-weight: 400;
   padding-left: 10px;
   padding-bottom: 20px;
+}
+.location #factoryContents {
+  display: none;
+}
+.location #factoryContents.on {
+  display: block;
+}
+.location #officeContents {
+  display: none;
+}
+.location #officeContents.on {
+  display: block;
 }
 /* footer */
 footer {

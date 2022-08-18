@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+body {
+  font-size: 1.125rem;
+  font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
+  background-color: #f6f5f1;
+  font-weight: 400;
+  line-height: 2;
+}
+/* 공통 */
+a {
+  color: inherit;
+}
+.underLine {
+  text-decoration: underline;
+}
+.block {
+  display: block;
+  margin-top: 20px;
+}
+.grayTxt {
+  color: #b1b1b1;
+  font-size: 20px;
+  margin-top: 100px;
+}
+.title {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.lightTxt {
+  line-height: 2;
+}
+/* 헤더, 내비게이션 영역 */
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  text-indent: -9999px;
+}
+header h1 a {
+  display: block;
+  width: 164px;
+  height: 53px;
+  background: url(../images/header_logo.png) no-repeat 0 50% / contain;
+  margin-left: 1.5vw;
+}
+header #gnb {
+  display: flex;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-right: 1.875rem;
+  line-height: 2.688rem;
+}
+header #gnb a {
+  display: block;
+  color: #000;
+  width: 100px;
+}
+header #gnb a:hover {
+  color: rgb(63, 94, 251);
+}
+/* information */
+.txt_wrap {
+  width: 100%;
+  height: auto;
+  margin: 120px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#information {
+  color: #000;
+  margin-right: 50px;
+}
+#information li {
+  width: 300px;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+#information .blackTxt {
+  width: 75px;
+  display: inline-block;
+  color: #b1b1b1;
+}
+#mainTitle h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1;
+}
+#mainTitle h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 18px;
+}
+/* mockup */
+main {
+  position: relative;
+  width: 1000px;
+  height: 520px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mockupWrap {
+  display: flex;
+  justify-content: space-around;
+}
+.mockupWrap:hover .mockupMobileImage {
+  background-position-y: -4073px;
+  transition: 30s linear;
+}
+.mockupMobileImage1 {
+  width: 240px;
+  height: 514px;
+  background: url(../images/1.gif) no-repeat 50% / cover;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.mockupMobileImage2 {
+  width: 240px;
+  height: 514px;
+  background: url(../images/2.gif) no-repeat 50% / cover;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.mockupMobileImage3 {
+  width: 240px;
+  height: 514px;
+  background: url(../images/3.gif) no-repeat 50% / cover;
+  border-radius: 35px;
+  overflow: hidden;
+}
+.mockupMobile {
+  width: 240px;
+  height: 515px;
+  background: url(../images/mobileMockup.png) no-repeat 50% / contain;
+}
+/* container */
+.container {
+  margin-left: 50%;
+  margin-right: 180px;
+}
+/* design element */
+.colorPlatte {
+  width: 200px;
+  height: 300px;
+  background: url(../images/colorpalette.png) no-repeat;
+}
+.typography {
+  width: 250px;
+  height: 300px;
+  background: url(../images/typography.png) no-repeat;
+}
+.smallTxt {
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.designWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.designWrap .color {
+  margin-right: 50px;
+}
+.designWrap li {
+  width: 80%;
+}
+
+.designWrap .lightTxt {
+  font-weight: 200;
+}
+
+/* viewMore */
+#viewMore {
+  display: flex;
+  align-items: center;
+  margin: 80px 0;
+}
+
+#viewMore li a {
+  display: block;
+  border: 2px solid black;
+  padding: 5px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+#viewMore li img {
+  width: 40px;
+}
+#viewMore li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.highlight {
+  background-color: #fad84e;
+  width: 120px;
+  margin: 65px 0 25px;
+}
+/* moveTosite */
+#moveTosite h2 {
+  text-indent: -9999px;
+}
+#moveTosite #project {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#moveTosite #project li {
+  width: 100%;
+  height: 300px;
+  background: no-repeat 50% / cover;
+  transition: 0.5s;
+}
+#moveTosite #project li:nth-child(1) {
+  background-image: url(../images/project1.jpg);
+}
+#moveTosite #project li:nth-child(2) {
+  background-image: url(../images/project2.jpg);
+}
+#moveTosite #project a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  line-height: 300px;
+  transition: 0.5s;
+}
+
+#moveTosite #project li:hover a {
+  background-color: transparent;
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 300;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* 페르소나 */
+.persona {
+  width: 100%;
+  height: 50vh;
+  background: url(../images/persona.PNG) no-repeat 50% / contain;
+}
