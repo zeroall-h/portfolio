@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* main */
+
+main .txt_box {
+  padding: 2.5rem 3rem;
+  width: auto;
+}
+main .txt_box p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+main .txt_box .small_txt {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+/* business */
+.business .txt1 li:nth-child(1) {
+  font-size: 22px;
+  font-weight: 400;
+  color: #ddd;
+}
+/* focus */
+.wrap_focus {
+  padding: 150px 60px 10px;
+}
+.wrap_focus p {
+  width: 70%;
+  font-size: 1rem;
+}
+
+/* global */
+.global {
+  padding: 88px 38px 60px;
+}
+#global_wrap li:nth-child(1),
+#global_wrap li:nth-child(2),
+#global_wrap li:nth-child(3) {
+  display: grid;
+}
+.global_img {
+  height: 12rem;
+}
+#global_wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 25rem, 10px;
+  grid-gap: 40px;
+}
+
+/* management */
+.management {
+  background-color: #a6988d;
+  padding: 88px 38px 300px;
+  position: relative;
+  z-index: 9;
+  margin-bottom: 200px;
+  height: 70rem;
+}
+.management h2 {
+  padding-bottom: 1rem;
+}
+#circle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 300px;
+  position: relative;
+  height: 600px;
+}
+.management #circle li {
+  width: 380px;
+  height: 380px;
+  padding: 10px;
+}
+.management #circle li:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-93%);
+}
+.management #circle li:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-7%);
+}
+.management #circle li:nth-child(3) {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.management .txt2 {
+  width: 250px;
+  margin: 0 auto;
+}
+/* change */
+.change {
+  padding: 88px 70px 0px;
+}
+.research {
+  padding: 0px 70px 60px;
+}
+/* value */
+.value {
+  position: absolute;
+  height: 300px;
+  width: 90%;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+/* location */
+.location {
+  padding: 0px 70px 60px;
+}
+.address h6 {
+  padding-top: 3px;
+}
+
+/* footer */
+footer .go_up {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9999;
+}
+footer .go_up:hover {
+  background-color: rgba(166, 152, 141, 0.6);
+}
+footer p {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
