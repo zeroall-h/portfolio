@@ -3,10 +3,10 @@
 body {
   font-size: 1.125rem;
   font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
-  background-color: #f6f5f1;
   font-weight: 400;
   line-height: 2;
 }
+
 /* 공통 */
 a {
   color: inherit;
@@ -21,16 +21,34 @@ a {
 .grayTxt {
   color: #b1b1b1;
   font-size: 20px;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 .title {
   font-size: 48px;
   font-weight: 500;
-  margin-bottom: 40px;
+  line-height: 1.2;
 }
 .lightTxt {
-  line-height: 2;
+  line-height: 1.6;
 }
+.bgblue {
+  width: 100%;
+  background-color: #86bdbb;
+  padding: 80px;
+  padding-right: 16%;
+  padding-left: 16%;
+  display: flex;
+}
+.bgblue .grayTxt {
+  color: #fff;
+}
+.bgwhite {
+  width: 100%;
+  padding: 80px;
+  padding-right: 16%;
+  padding-left: 16%;
+}
+
 /* 헤더, 내비게이션 영역 */
 header {
   width: 100%;
@@ -64,40 +82,6 @@ header #gnb a {
 header #gnb a:hover {
   color: rgb(63, 94, 251);
 }
-/* information */
-.txt_wrap {
-  width: 100%;
-  height: auto;
-  margin: 120px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#information {
-  color: #000;
-  margin-right: 50px;
-}
-#information li {
-  width: 300px;
-  font-size: 0.9rem;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-#information .blackTxt {
-  width: 75px;
-  display: inline-block;
-  color: #b1b1b1;
-}
-#mainTitle h2 {
-  font-size: 50px;
-  font-weight: 500;
-  line-height: 1;
-}
-#mainTitle h3 {
-  font-size: 28px;
-  font-weight: 500;
-  margin-top: 18px;
-}
 /* mockup */
 main {
   position: relative;
@@ -105,14 +89,11 @@ main {
   height: 520px;
   margin: 0 auto;
   overflow: hidden;
+  margin-top: 100px;
 }
 .mockupWrap {
   display: flex;
   justify-content: space-around;
-}
-.mockupWrap:hover .mockupMobileImage {
-  background-position-y: -4073px;
-  transition: 30s linear;
 }
 .mockupMobileImage1 {
   width: 240px;
@@ -140,10 +121,55 @@ main {
   height: 515px;
   background: url(../images/mobileMockup.png) no-repeat 50% / contain;
 }
+/* 제목 */
+.txt_wrap {
+  width: 70%;
+  margin: 120px auto 200px;
+  display: flex;
+  justify-content: space-around;
+}
+#mainTitle {
+  margin-right: 100px;
+}
+#mainTitle h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+#mainTitle h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 18px;
+}
+#subTitle {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}
+#subTitle li {
+  width: 200px;
+  margin: 10px 0;
+}
+#subTitle li:nth-child(1),
+#subTitle li:nth-child(2) {
+  margin-top: 0;
+}
+#subTitle li h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+#subTitle li p {
+  font-size: 1rem;
+  font-weight: 400;
+}
 /* container */
-.container {
-  margin-left: 50%;
-  margin-right: 180px;
+.box1 {
+  width: 35%;
+  margin: 0;
+}
+.box2 {
+  display: flex;
+  align-items: center;
 }
 /* design element */
 .colorPlatte {
@@ -173,40 +199,41 @@ main {
 .designWrap li {
   width: 80%;
 }
-
 .designWrap .lightTxt {
   font-weight: 200;
 }
-
-/* viewMore */
+.highlight {
+  background-color: #fad84e;
+}
+/* UX vision (수정완료) */
+.uxvision .box2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+/* viewMore (수정완료) */
 #viewMore {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 80px 0;
+  margin: 80px auto;
+  width: 50%;
 }
-
 #viewMore li a {
   display: block;
+  width: 300px;
   border: 2px solid black;
   padding: 5px 20px;
+  text-align: center;
   font-size: 20px;
   font-weight: 500;
-  margin-right: 20px;
-}
-#viewMore li img {
-  width: 40px;
+  margin-top: 40px;
+  margin-right: 10px;
 }
 #viewMore li a:hover {
   background-color: #000;
   color: #fff;
 }
-
-.highlight {
-  background-color: #fad84e;
-  width: 120px;
-  margin: 65px 0 25px;
-}
-/* moveTosite */
+/* moveTosite (수정완료)*/
 #moveTosite h2 {
   text-indent: -9999px;
 }
@@ -239,11 +266,10 @@ main {
   line-height: 300px;
   transition: 0.5s;
 }
-
 #moveTosite #project li:hover a {
   background-color: transparent;
 }
-/* footer */
+/* footer (수정완료) */
 footer {
   width: 100%;
   height: 60px;
@@ -253,10 +279,131 @@ footer {
   line-height: 60px;
   text-align: center;
 }
-
-/* 페르소나 */
-.persona {
+/* 리서치 */
+.researchBg,
+.personaBg {
+  display: flex;
+}
+#research2 {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.researchTitle {
   width: 100%;
-  height: 50vh;
-  background: url(../images/persona.PNG) no-repeat 50% / contain;
+  font-size: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.researchText {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  border: 2px solid black;
+  border-radius: 20px;
+  position: relative;
+  padding: 20px 30px;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.circlebox {
+  width: 60%;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.personaBg .box2 {
+  width: 65%;
+  margin-top: 50px;
+  height: 450px;
+}
+#persona2 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  padding: 30px;
+}
+#persona2 li {
+  width: 100%;
+  color: #000;
+  font-weight: 500;
+}
+.personaContents {
+  width: 70%;
+  float: right;
+  font-weight: 400;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  background: url(../images/personaPhoto.png) no-repeat 60% / cover;
+  margin-right: 20px;
+}
+#name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.designBg {
+  display: flex;
+  flex-wrap: wrap;
+}
+#design2 {
+  display: flex;
+  width: 100%;
+}
+#designElement {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+}
+#designElement li {
+  width: 30%;
+  margin-right: 20px;
+}
+.img1 {
+  width: 247px;
+  height: 300px;
+  background: url(../images/img1.png) no-repeat 50% / cover;
+}
+.img2 {
+  width: 247px;
+  height: 300px;
+  background: url(../images/img2.png) no-repeat 50% / contain;
+}
+.img3 {
+  width: 247px;
+  height: 300px;
+  background: url(../images/img3.png) no-repeat 50% / cover;
+}
+#designElement h3 {
+  margin-top: 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.progressBox {
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
+}
+#Progress {
+  margin-bottom: 60px;
+}
+.reviewBg {
+  display: flex;
+}
+#review2 {
+  width: 65%;
+  margin-top: 40px;
 }
