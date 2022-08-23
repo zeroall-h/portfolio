@@ -4,51 +4,49 @@ body {
   font-size: 1.125rem;
   font-family: "Noto Sans KR", "나눔고딕", "맑은 고딕", sans-serif;
   font-weight: 400;
-  line-height: 2;
 }
 
 /* 공통 */
 a {
   color: inherit;
 }
-.underLine {
-  text-decoration: underline;
-}
-.block {
-  display: block;
-  margin-top: 20px;
-}
-.grayTxt {
-  color: #b1b1b1;
-  font-size: 20px;
-  margin-top: 0px;
-}
-.title {
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 1.2;
-}
-.lightTxt {
-  line-height: 1.6;
-}
-.bgblue {
-  width: 100%;
-  background-color: #86bdbb;
-  padding: 80px;
-  padding-right: 16%;
-  padding-left: 16%;
+section {
+  margin: 180px 15%;
   display: flex;
 }
-.bgblue .grayTxt {
-  color: #fff;
+.box1 {
+  width: 50%;
+  position: relative;
 }
-.bgwhite {
-  width: 100%;
-  padding: 80px;
-  padding-right: 16%;
-  padding-left: 16%;
+.box1 h2 {
+  font-size: 30px;
+  font-weight: 500;
 }
-
+.box1::before {
+  content: "";
+  width: 35px;
+  height: 10px;
+  background-color: #db730a;
+  position: absolute;
+  top: -12px;
+  left: 0;
+}
+.box2 {
+  width: 50%;
+  line-height: 1.9;
+}
+.orangeColor {
+  color: #db730a;
+}
+.orangeTitle {
+  color: #db730a;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 40px;
+}
+.box2 li:nth-child(1) {
+  margin-top: 0;
+}
 /* 헤더, 내비게이션 영역 */
 header {
   width: 100%;
@@ -82,157 +80,76 @@ header #gnb a {
 header #gnb a:hover {
   color: rgb(63, 94, 251);
 }
-/* mockup */
-main {
-  position: relative;
-  width: 1000px;
-  height: 520px;
-  margin: 0 auto;
-  overflow: hidden;
-  margin-top: 100px;
-}
-.mockupWrap {
+/* summary */
+.summaryWrap {
+  margin: 150px 15%;
   display: flex;
-  justify-content: space-around;
+  border-bottom: 1px solid black;
+  height: 580px;
 }
-.mockupMobileImage1 {
-  width: 240px;
-  height: 514px;
-  background: url(../images/1.gif) no-repeat 50% / cover;
-  border-radius: 35px;
-  overflow: hidden;
+#titleWrap {
+  width: 50%;
+  margin-right: 30px;
+  box-sizing: border-box;
+  padding-top: 30px;
 }
-.mockupMobileImage2 {
-  width: 240px;
-  height: 514px;
-  background: url(../images/2.gif) no-repeat 50% / cover;
-  border-radius: 35px;
-  overflow: hidden;
+#titleWrap li:nth-child(1) {
+  padding-bottom: 15px;
 }
-.mockupMobileImage3 {
-  width: 240px;
-  height: 514px;
-  background: url(../images/3.gif) no-repeat 50% / cover;
-  border-radius: 35px;
-  overflow: hidden;
+#titleWrap li:nth-child(3) {
+  padding-bottom: 50px;
 }
-.mockupMobile {
-  width: 240px;
-  height: 515px;
-  background: url(../images/mobileMockup.png) no-repeat 50% / contain;
+#titleWrap li:nth-child(4) {
+  line-height: 1.8;
 }
-/* 제목 */
-.txt_wrap {
-  width: 70%;
-  margin: 120px auto 200px;
-  display: flex;
-  justify-content: space-around;
+#titleWrap img {
+  display: block;
+  width: 120px;
 }
-#mainTitle {
-  margin-right: 100px;
-}
-#mainTitle h2 {
-  font-size: 50px;
+#titleWrap h2 {
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.4;
 }
-#mainTitle h3 {
-  font-size: 24px;
-  font-weight: 400;
-  margin-top: 18px;
-}
-#subTitle {
+#mobileImage {
+  width: 50%;
   display: flex;
-  flex-wrap: wrap;
-  width: 500px;
+  justify-content: space-around;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  padding-right: 0;
 }
-#subTitle li {
-  width: 200px;
-  margin: 10px 0;
+/* 프로젝트 평가 */
+ol {
+  padding-left: 20px;
 }
-#subTitle li:nth-child(1),
-#subTitle li:nth-child(2) {
-  margin-top: 0;
+/* 프로젝트를 마치며 */
+.ending li {
+  margin-bottom: 20px;
 }
-#subTitle li h3 {
-  font-size: 22px;
-  font-weight: 500;
-}
-#subTitle li p {
-  font-size: 1rem;
-  font-weight: 400;
-}
-/* container */
-.box1 {
-  width: 35%;
-  margin: 0;
-}
-.box2 {
-  display: flex;
-  align-items: center;
-}
-/* design element */
-.colorPlatte {
-  width: 200px;
-  height: 300px;
-  background: url(../images/colorpalette.png) no-repeat;
-}
-.typography {
-  width: 250px;
-  height: 300px;
-  background: url(../images/typography.png) no-repeat;
-}
-.smallTxt {
-  font-size: 32px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-weight: 500;
-}
-.designWrap {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.designWrap .color {
-  margin-right: 50px;
-}
-.designWrap li {
-  width: 80%;
-}
-.designWrap .lightTxt {
-  font-weight: 200;
-}
-.highlight {
-  background-color: #fad84e;
-}
-/* UX vision (수정완료) */
-.uxvision .box2 {
-  font-size: 40px;
-  font-weight: 500;
-}
-/* viewMore (수정완료) */
+/* viewMore 시작 */
 #viewMore {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 80px auto;
-  width: 50%;
+  margin: 80px 15% 80px 50%;
 }
 #viewMore li a {
+  width: 250px;
   display: block;
-  width: 300px;
   border: 2px solid black;
-  padding: 5px 20px;
+  padding: 5px 10px;
   text-align: center;
   font-size: 20px;
   font-weight: 500;
   margin-top: 40px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 #viewMore li a:hover {
   background-color: #000;
   color: #fff;
 }
+/* viewMore 끝 */
+
 /* moveTosite (수정완료)*/
 #moveTosite h2 {
   text-indent: -9999px;
@@ -269,6 +186,7 @@ main {
 #moveTosite #project li:hover a {
   background-color: transparent;
 }
+
 /* footer (수정완료) */
 footer {
   width: 100%;
@@ -279,131 +197,30 @@ footer {
   line-height: 60px;
   text-align: center;
 }
-/* 리서치 */
-.researchBg,
-.personaBg {
+.preview {
   display: flex;
 }
-#research2 {
-  width: 65%;
-  display: flex;
-  flex-wrap: wrap;
+.preview li:nth-child(1) {
+  padding-right: 30px;
 }
-.researchTitle {
-  width: 100%;
-  font-size: 25px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-.researchText {
-  display: flex;
-  justify-content: space-around;
-}
+/* 목업 */
 
-.box {
-  border: 2px solid black;
-  border-radius: 20px;
-  position: relative;
-  padding: 20px 30px;
-  margin-left: 5px;
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 10px;
+.mockupMobileImage1 {
+  width: 240px;
+  height: 514px;
+  background: url(../images/2.gif) no-repeat 50% / cover;
+  border-radius: 35px;
+  overflow: hidden;
 }
-.circlebox {
-  width: 60%;
-  height: auto;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  border-radius: 20px;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
+.mockupMobileImage3 {
+  width: 240px;
+  height: 514px;
+  background: url(../images/3.gif) no-repeat 50% / cover;
+  border-radius: 35px;
+  overflow: hidden;
 }
-.personaBg .box2 {
-  width: 65%;
-  margin-top: 50px;
-  height: 450px;
-}
-#persona2 {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 16px;
-  padding: 30px;
-}
-#persona2 li {
-  width: 100%;
-  color: #000;
-  font-weight: 500;
-}
-.personaContents {
-  width: 70%;
-  float: right;
-  font-weight: 400;
-}
-.photo {
-  width: 100%;
-  height: 100%;
-  background: url(../images/personaPhoto.png) no-repeat 60% / cover;
-  margin-right: 20px;
-}
-#name {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-.designBg {
-  display: flex;
-  flex-wrap: wrap;
-}
-#design2 {
-  display: flex;
-  width: 100%;
-}
-#designElement {
-  margin-top: 60px;
-  display: flex;
-  width: 100%;
-}
-#designElement li {
-  width: 30%;
-  margin-right: 20px;
-}
-.img1 {
-  width: 247px;
-  height: 300px;
-  background: url(../images/img1.png) no-repeat 50% / cover;
-}
-.img2 {
-  width: 247px;
-  height: 300px;
-  background: url(../images/img2.png) no-repeat 50% / contain;
-}
-.img3 {
-  width: 247px;
-  height: 300px;
-  background: url(../images/img3.png) no-repeat 50% / cover;
-}
-#designElement h3 {
-  margin-top: 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-.progressBox {
-  width: 100%;
-  font-size: 1rem;
-  text-align: left;
-}
-#Progress {
-  margin-bottom: 60px;
-}
-.reviewBg {
-  display: flex;
-}
-#review2 {
-  width: 65%;
-  margin-top: 40px;
+.mockupMobile {
+  width: 240px;
+  height: 515px;
+  background: url(../images/mobileMockup.png) no-repeat 50% / contain;
 }
