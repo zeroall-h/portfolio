@@ -34,7 +34,7 @@ header.active .navigator a:hover {
 main {
   margin-top: -80px;
   height: 100vh;
-  background: url(../images/main_1.png) no-repeat 50% / cover;
+  background: url(../images/main_img_001.png) no-repeat 50% / cover;
   display: grid;
   place-items: center;
   position: relative;

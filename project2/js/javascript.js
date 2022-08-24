@@ -11,7 +11,7 @@ $("#officeBtn").on("click", function (e) {
   $("#factoryContents").removeClass("on");
   $("#officeContents").addClass("on");
   $(this).addClass("line");
-  $("#map1").style.display = "none";
+  $("#map").style.display = "block";
 });
 $("#factoryBtn").on("click", function () {
   $("#officeBtn").removeClass("line");
@@ -33,7 +33,7 @@ addEventListener("scroll", () => {
   }
 });
 
-// kakao map 실행코드
+// kakao map 실행코드 (map)
 var container = document.getElementById("map");
 
 var options = {
@@ -59,3 +59,30 @@ var infowindow = new kakao.maps.InfoWindow({
 });
 // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 infowindow.open(map, marker);
+
+// kakao map 실행코드 (map1)
+var container1 = document.getElementById("map1");
+
+var options1 = {
+  center: new kakao.maps.LatLng(37.1, 126.9105),
+  level: 3,
+};
+var map1 = new kakao.maps.Map(container1, options1);
+// 마커가 표시될 위치입니다
+var markerPosition1 = new kakao.maps.LatLng(37.1, 126.9105);
+// 마커를 생성합니다
+var marker1 = new kakao.maps.Marker({
+  position: markerPosition1,
+});
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map1);
+// 인포윈도우
+var iwContent1 = '<div style="padding:5px">    효성중공업 공장 </div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+  iwPosition1 = new kakao.maps.LatLng(37.1, 126.9105); //인포윈도우 표시 위치입니다
+// 인포윈도우를 생성합니다
+var infowindow1 = new kakao.maps.InfoWindow({
+  position: iwPosition1,
+  content: iwContent1,
+});
+// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+infowindow.open(map1, marker1);
