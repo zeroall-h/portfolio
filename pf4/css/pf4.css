@@ -235,10 +235,10 @@ header #gnb a:hover {
   transition: 0.5s;
 }
 #moveTosite #project li:nth-child(1) {
-  background-image: url(../images/project1.jpg);
+  background-image: url(../images/project3.png);
 }
 #moveTosite #project li:nth-child(2) {
-  background-image: url(../images/project_prev.png);
+  background-image: url(../images/project1.jpg);
 }
 #moveTosite #project a {
   display: block;
