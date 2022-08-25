@@ -237,6 +237,7 @@ main {
   top: 20px;
 }
 .projectBox > li:nth-child(2),
+.projectBox > li:nth-child(3),
 .projectBox > li:last-child {
   border: #797979 1px solid;
   border-bottom: none;
