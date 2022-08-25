@@ -108,7 +108,7 @@ header #gnb a:hover {
   margin: 0 auto;
 }
 .mockupWrap:hover .mockupMobileImage {
-  background-position-y: -3200px;
+  background-position-y: -2990px;
   transition: 30s linear;
 }
 .mockupMobileImage {
@@ -130,6 +130,7 @@ header #gnb a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+  cursor: pointer;
 }
 /* container */
 .container {
