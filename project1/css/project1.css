@@ -205,8 +205,7 @@ h3 {
 /* 네번째 페이지  */
 .row4wrap {
   width: 100%;
-  height: 700vh;
-
+  height: 800vh;
   position: relative;
   overflow: visible;
 }
@@ -226,7 +225,6 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   z-index: 999;
 }
 .bar1 {
@@ -301,7 +299,7 @@ path {
 }
 
 /* 여섯번째 페이지 */
-.symbolBlack {
+/* .symbolBlack {
   width: 145px;
   height: 145px;
   background: url(../images/symbol_black.png) 50% / cover;
@@ -309,7 +307,7 @@ path {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 .mountain {
   width: 768px;
   height: 344px;

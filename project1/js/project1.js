@@ -82,6 +82,7 @@ addEventListener("scroll", () => {
             10 *
             (scrolled * scrolled * scrolled))) /
         2 +
+      1 +
       "px";
     bar3.style.height = bar4.style.height =
       (document.documentElement.clientHeight -
@@ -90,6 +91,7 @@ addEventListener("scroll", () => {
             10 *
             (scrolled * scrolled * scrolled))) /
         2 +
+      1 +
       "px";
   } else if (scrolled < 0.27) {
     row4wrap2.style.background =

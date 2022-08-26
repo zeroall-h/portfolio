@@ -95,7 +95,7 @@ var marker = new kakao.maps.Marker({
   position: markerPosition,
 });
 marker.setMap(map);
-var iwContent = '<div style="padding:5px">    효성중공업 본사 </div>',
+var iwContent = '<p style="width:150px; font-size:1rem">효성중공업 본사</p>',
   iwPosition = new kakao.maps.LatLng(37.5214, 126.9105);
 var infowindow = new kakao.maps.InfoWindow({
   position: iwPosition,
@@ -104,17 +104,19 @@ var infowindow = new kakao.maps.InfoWindow({
 infowindow.open(map, marker);
 
 // kakao map 실행코드 (map1)
+
 var mapContainer = document.getElementById("map1"),
   mapOption = {
-    center: new kakao.maps.LatLng(36.5526, 127.2748),
-    level: 3,
+    center: new kakao.maps.LatLng(36.5613, 127.2527),
+    level: 5,
   };
 var map = new kakao.maps.Map(mapContainer, mapOption);
 $(".btn li:last-child").on("click", function relayout() {
   map.relayout();
 });
 marker.setMap(map);
-var markerPosition = new kakao.maps.LatLng(36.5526, 127.2748);
+
+var markerPosition = new kakao.maps.LatLng(36.5613, 127.2527);
 var marker = new kakao.maps.Marker({
   position: markerPosition,
 });
