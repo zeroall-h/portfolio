@@ -16,11 +16,13 @@ body {
   background: url(../images/gridBackground.png);
   background-size: 20%;
 }
-h1 {
-  z-index: 1;
+#logo.on1 {
+  display: none;
 }
-h1 img {
-  width: 45%;
+#logo {
+  display: block;
+  transition: 1.5s;
+  width: 180px;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -66,7 +68,7 @@ h1 img {
   display: none;
 }
 .gnbWrap.on {
-  z-index: 9;
+  z-index: 999;
   background-color: transparent;
 }
 #gnb {
@@ -303,4 +305,23 @@ footer a {
 footer a:hover {
   background-color: #000;
   color: #fff;
+}
+.moving-circle {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  transform: rotate(-90deg);
+  animation: ani 5s linear infinite;
+  transition: 0.5s;
+}
+
+@keyframes ani {
+  0% {
+    stroke-dashoffset: 500; /*500지점부터 svg가 나타남*/
+  }
+  50% {
+    stroke-dashoffset: 0; /*0지점부터 svg가 나타남*/
+  }
+  100% {
+    stroke-dashoffset: -500; /*-500지점부터 svg가 나타남*/
+  }
 }

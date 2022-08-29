@@ -38,7 +38,7 @@
       <header>
         <h1>
           <a href="/">
-            <img src="./images/logo.gif" alt="대림 기업로고" />
+            <img src="./images/logo.gif" alt="대림 기업로고" id="logo" />
           </a>
         </h1>
         <div class="gnbWrap">
@@ -54,7 +54,17 @@
         </ul>
       </header>
       <section class="main">
-        <div class="aniLine"></div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="76"
+          width="76"
+          class="moving-circle"
+        >
+          <path
+            d="M 29.848 62.32 v -4.92 h 24.108 L 13.12 16.564 L 16.564 13.12 L 57.4 53.956 V 29.848 h 4.92 V 62.32 Z"
+          />
+        </svg>
+
         <div class="contentWrap">
           <h2>
             <span class="subTitle">BATHROOM LIFESTYLE CREATOR</span> 대한민국
@@ -208,6 +218,7 @@
       });
       $(".gnbWrap").on("click", function () {
         $(this).toggleClass("on");
+        $("#logo").toggleClass("on1");
       });
     </script>
   </body>
