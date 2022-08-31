@@ -191,6 +191,7 @@ header .headerTop {
   width: 100%;
   height: 1100px;
   overflow: hidden;
+  position: relative;
 }
 .product .contentWrap h2 {
   margin: 0;
