@@ -3,7 +3,7 @@ const gnbWrap = document.querySelector(".gnbWrap");
 const logo = document.querySelector("#logo");
 const headerTop = document.querySelector(".headerTop");
 const headerLeft = document.querySelector(".headerLeft");
-const menuImage = document.querySelector("#menuImage");
+const white = document.querySelector("#white");
 const gnb = document.querySelector("#gnb");
 const intro = document.querySelector(".intro");
 gnbWrap.addEventListener("click", function () {
@@ -11,7 +11,7 @@ gnbWrap.addEventListener("click", function () {
   logo.classList.toggle("on1");
   headerTop.classList.toggle("on");
   headerLeft.classList.toggle("on");
-  menuImage.classList.toggle("on");
+  white.classList.toggle("on");
 });
 gnbWrap.addEventListener("click", () => {
   gnb.classList.toggle("on");
