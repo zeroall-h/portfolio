@@ -1,0 +1,54 @@
+.block {
+  display: inline;
+}
+
+.contentWrap {
+  padding: 20px 120px;
+}
+
+.container {
+  background-size: 10%;
+}
+
+.main .intro {
+  padding: 40px 50px;
+}
+.main .moving-circle {
+  margin-top: 100px;
+  margin-left: 120px;
+}
+
+.product .boxWrap1 {
+  width: 45%;
+  height: 450px;
+}
+.product .boxWrap2 {
+  width: 45%;
+  height: 450px;
+}
+.product .boxWrap3 {
+  width: 45%;
+  height: 450px;
+}
+
+.cs h2 {
+  padding: 0px 100px;
+}
+.cs #csGnb {
+  padding: 0px 100px;
+}
+.cs #inform {
+  margin-top: 80px;
+}
+.cs #inform input::-moz-placeholder {
+  padding-left: 76px;
+}
+.cs #inform input:-ms-input-placeholder {
+  padding-left: 76px;
+}
+.cs #inform input::placeholder {
+  padding-left: 76px;
+}
+.cs #inform button {
+  margin-right: 76px;
+}

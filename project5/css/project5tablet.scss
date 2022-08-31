@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@mixin imgSize {
+  width: 45%;
+  height: 450px;
+}
+// 공통스타일
+
+.block {
+  display: inline;
+}
+.contentWrap {
+  padding: 20px 120px;
+}
+//   컨테이너
+.container {
+  background-size: 10%;
+}
+// 메인 영역
+.main {
+  .intro {
+    padding: 40px 50px;
+  }
+  .moving-circle {
+    margin-top: 100px;
+    margin-left: 120px;
+  }
+}
+// 프로덕트
+.product {
+  .boxWrap1 {
+    @include imgSize;
+  }
+  .boxWrap2 {
+    @include imgSize;
+  }
+  .boxWrap3 {
+    @include imgSize;
+  }
+}
+// 고객센터
+.cs {
+  h2 {
+    padding: 0px 100px;
+  }
+  #csGnb {
+    padding: 0px 100px;
+  }
+  #inform {
+    margin-top: 80px;
+    input {
+      &::placeholder {
+        padding-left: 76px;
+      }
+    }
+    button {
+      margin-right: 76px;
+    }
+  }
+}
