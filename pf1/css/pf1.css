@@ -180,12 +180,7 @@ header #gnb a:hover {
   align-items: center;
   margin: 80px 0;
 }
-#viewMore li {
-  font-size: 20px;
-  font-weight: 500;
-  vertical-align: text-top;
-  margin-right: 10px;
-}
+
 .highlightMargin {
   margin: 65px 0 25px;
 }
