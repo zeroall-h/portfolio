@@ -81,7 +81,7 @@ header #gnb a:hover {
 #information li {
   width: 300px;
   font-size: 0.9rem;
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #ddd;
 }
 #information .blackTxt {
@@ -95,7 +95,7 @@ header #gnb a:hover {
   line-height: 1;
 }
 #mainTitle h3 {
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-top: 18px;
 }
@@ -185,14 +185,19 @@ header #gnb a:hover {
   justify-content: space-between;
 }
 .designWrap .color {
-  margin-right: 50px;
+  width: 50%;
+  margin-right: 25px;
+}
+.designWrap .font {
+  width: 50%;
+  margin-left: 25px;
 }
 .designWrap li {
-  width: 80%;
+  width: 100%;
 }
 
 .designWrap .lightTxt {
-  font-weight: 200;
+  font-weight: 400;
 }
 
 /* viewMore */
@@ -201,44 +206,23 @@ header #gnb a:hover {
   align-items: center;
   margin: 80px 0;
 }
-#viewMore li {
+#viewMore li a {
+  width: 250px;
+  display: block;
+  border: 2px solid black;
+  padding: 5px 10px;
+  text-align: center;
   font-size: 20px;
   font-weight: 500;
-  vertical-align: text-top;
-  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
-#viewMore li a {
-  display: inline-block;
-  position: relative;
+#viewMore li a:hover {
+  background-color: #000;
+  color: #fff;
 }
-#viewMore li img {
-  width: 40px;
-}
-#viewMore li a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: #fad84e;
-  transition: all 0.5s;
-}
-#viewMore li a::before {
-  content: "";
-  position: absolute;
-  right: 50%;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: #fad84e;
-  transition: all 0.5s;
-}
-#viewMore a:hover::after {
-  width: 50%;
-}
-#viewMore a:hover::before {
-  width: 50%;
+.highlightMargin {
+  margin: 65px 0 25px;
 }
 .highlight {
   background-color: #fad84e;
@@ -291,4 +275,24 @@ footer {
   font-weight: 300;
   line-height: 60px;
   text-align: center;
+}
+.goUp.on {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: #f6f5f1 url(../images/arrow.svg) no-repeat 50% / cover;
+  background-size: 60%;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  transition: 0.5s;
+}
+.goUp.on:hover {
+  background-position: top;
+}
+.goUp {
+  display: none;
+  transition: 0.5s;
 }

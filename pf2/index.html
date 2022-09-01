@@ -27,6 +27,8 @@
     <script src="../common/jquery-3.6.0.min.js"></script>
     <script src="../common/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 작성한 js 파일 -->
+    <script defer src="../pf5/javascript/pf5.js"></script>
   </head>
   <body>
     <header>
@@ -169,11 +171,11 @@
           Problems & Solution
         </li>
         <li
-          class="highlight"
+          class="highlightMargin"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          다사다난했던 ScrollY와의 첫만남
+          <span class="highlight">다사다난했던 ScrollY와의 첫만남</span>
         </li>
         <li
           class="lightTxt"
@@ -195,11 +197,11 @@
           >
         </li>
         <li
-          class="highlight"
+          class="highlightMargin"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          카카오맵 API가 갑자기 안된다?
+          <span class="highlight">카카오맵 API가 갑자기 안된다?</span>
         </li>
         <li
           class="lightTxt"
@@ -251,9 +253,6 @@
       </ul>
       <ul id="viewMore">
         <li>
-          <img src="./images/viewMore_img.png" alt="화살표" />
-        </li>
-        <li>
           <a
             href="https://zeroall-h.github.io/portfolio/project2/"
             target="_blank"
@@ -263,7 +262,7 @@
         </li>
       </ul>
     </div>
-
+    <a class="goUp" href="#"></a>
     <article id="moveTosite">
       <h2>사이트 이동</h2>
       <ul id="project">
@@ -279,8 +278,5 @@
     <footer>
       &copy; 2022 Design & Published by Heo Da Yeong. All Rights Reserved.
     </footer>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>

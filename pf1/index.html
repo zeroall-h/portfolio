@@ -27,6 +27,8 @@
     <script src="../common/jquery-3.6.0.min.js"></script>
     <script src="../common/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 작성한 js 파일 -->
+    <script defer src="../pf5/javascript/pf5.js"></script>
   </head>
   <body>
     <header>
@@ -158,11 +160,13 @@
           Problems & Solution
         </li>
         <li
-          class="highlight"
+          class="highlightMargin"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          스크롤 업/다운에 맞춰 크기변경이 필요하다!
+          <span class="highlight"
+            >스크롤 업/다운에 맞춰 크기변경이 필요하다!</span
+          >
         </li>
         <li
           class="lightTxt"
@@ -216,9 +220,6 @@
       </ul>
       <ul id="viewMore">
         <li>
-          <img src="./images/viewMore_img.png" alt="화살표" />
-        </li>
-        <li>
           <a
             href="https://zeroall-h.github.io/portfolio/project1/"
             target="_blank"
@@ -228,15 +229,15 @@
         </li>
       </ul>
     </div>
-
+    <a class="goUp" href="#"></a>
     <article id="moveTosite">
       <h2>사이트 이동</h2>
       <ul id="project">
         <li>
-          <a href="https://zeroall-h.github.io/portfolio/pf2/">PROJECT2</a>
+          <a href="https://zeroall-h.github.io/portfolio/pf5/">PROJECT5</a>
         </li>
         <li>
-          <a href="https://zeroall-h.github.io/portfolio/pf3/">PROJECT3</a>
+          <a href="https://zeroall-h.github.io/portfolio/pf2/">PROJECT2</a>
         </li>
       </ul>
     </article>
@@ -244,8 +245,5 @@
     <footer>
       &copy; 2022 Design & Published by Heo Da Yeong. All Rights Reserved.
     </footer>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>

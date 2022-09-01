@@ -52,7 +52,7 @@ header {
   position: fixed;
   top: 0;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 9998;
 }
 header h1 {
   text-indent: -9999px;
@@ -234,7 +234,8 @@ main {
   color: #fff;
   padding: 90px;
   position: sticky;
-  top: 20px;
+  top: 80px;
+  z-index: 9997;
 }
 .projectBox > li:nth-child(2),
 .projectBox > li:nth-child(3),
@@ -326,19 +327,18 @@ span.decoration {
   width: 100%;
   height: 100%;
   background-color: #f6f5f1;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
   padding: 90px;
 }
 .skillList {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 65px auto 0px;
+  margin: 65px auto;
 }
 .skillList li {
   width: 24%;
-  height: 26.042vw;
+  height: 100%;
   border-radius: 36px;
   background-color: #fff;
   padding: 2.6041666666666665vw;
@@ -457,11 +457,11 @@ footer {
   width: 100%;
   background-color: #000;
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   display: grid;
   place-items: center;
-  padding: 30px 20px;
+  padding: 10px 20px;
 }
 
 /* 마우스 이벤트 */

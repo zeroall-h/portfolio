@@ -211,7 +211,7 @@ header #gnb a:hover {
   text-align: center;
   font-size: 20px;
   font-weight: 500;
-  margin-top: 40px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 #viewMore li a:hover {
@@ -288,4 +288,5 @@ footer {
 }
 .goUp {
   display: none;
+  transition: 0.5s;
 }
