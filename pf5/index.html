@@ -17,17 +17,20 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- 파비콘 -->
+    <link href="../myfavicon.ico" rel="icon" type="image/x-icon" />
     <!-- aos css 연결 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- 작성한 css파일 -->
     <link rel="stylesheet" href="./css/pf5.css" />
-    <!-- 파비콘 -->
-    <link href="../myfavicon.ico" rel="icon" type="image/x-icon" />
+
     <!-- jQuery 연결 -->
     <script src="../common/jquery-3.6.0.min.js"></script>
     <script src="../common/jquery-ui.min.js"></script>
     <!-- aos 스크립트 연결 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 작성한 js 연결 -->
+    <script defer src="./javascript/pf5.js"></script>
   </head>
   <body>
     <header>
@@ -69,7 +72,7 @@
           <li>
             <h2>Website Re-Design<span class="block">대림바스</span></h2>
           </li>
-          <li><h3>#반응형 #SCSS 사용 #SVG 애니메이션</h3></li>
+          <li><h3>#반응형 #SCSS #SVG 애니메이션</h3></li>
         </ul>
       </div>
     </article>
@@ -100,9 +103,9 @@
 
           <span class="block"
             >타일 모양이 연상될 수 있도록 배경에 격자 무늬를 넣었으며, 브랜드
-            컬러를 활용해 사용자들이 기업의 컬러를 기억할 수 있도록 했습니다.
-            또한, 기존의 정적이고 수직적 느낌에서 벗어나고자 마우스 이벤트,
-            애니메이션 등 동적인 요소를 가미하고자 했습니다.
+            컬러를 활용해 사용자들에게 기업의 색을 전달해보았습니다. 또한,
+            기존의 정적이고 수직적 느낌에서 벗어나고자 마우스 이벤트, 애니메이션
+            등 동적인 요소를 가미하고자 했습니다.
           </span>
         </li>
       </ul>
@@ -131,8 +134,7 @@
               </li>
               <li class="smallTxt">Typography</li>
               <li class="lightTxt">
-                가독성을 개선한 Apple SD 산돌고딕 Neo체를 사용해 세련하고 편안한
-                느낌을 전하고자 했습니다.
+                Apple SD 산돌고딕 Neo체를 사용해 가독성을 높였습니다.
               </li>
             </ul>
           </div>
@@ -147,11 +149,14 @@
         <li class="grayTxt">DEVELOPMENT</li>
         <li class="title">Tech Stack</li>
         <li class="lightTxt">
-          • SCSS 이용한 CSS 컴파일 (@mixin, nesting 사용)
+          • SCSS 이용한 css 컴파일 (@mixin, nesting 사용)
         </li>
-        <li class="lightTxt">• 메인 화면 화살표 SVG 제작 및 움직임 적용</li>
+        <li class="lightTxt">• 메인 화면 화살표 svg 제작 및 움직임 적용</li>
         <li class="lightTxt">
-          • PC 메뉴에 마우스 오버 시, 라인이 이동하는 애니메이션 구현
+          • PC 메뉴에 마우스 오버 시, 라인이 이동하는 css 애니메이션 구현
+        </li>
+        <li class="lightTxt">
+          • 스크롤y를 이용해 특정 영역에서 div박스가 나타나는 이벤트 생성
         </li>
       </ul>
       <ul id="solution">
@@ -171,56 +176,66 @@
         </li>
 
         <li
-          class="highlight"
+          class="highlightMargin"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          원하는 모양대로 svg 파일 생성이 안된다?
+          <span class="highlight"
+            >원하는 모양대로 svg 파일 생성이 안 된다?</span
+          >
         </li>
         <li
           class="lightTxt"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          일러스트에서 png파일을 만들어 컨버터를 이용해 svg파일을 생성했습니다.
+          일러스트에서 png 파일을 만들어 컨버터를 이용해 svg파일을 생성했습니다.
           그런데 끝부분이 둥글게 변환되는 문제가 발생했습니다. 다른 사이트에서
           여러 번 시도했지만 동일한 형태로 변환되었습니다.
-          <span class="block">
-            이에 path generator를 이용해 직접 svg파일을 만들어보자 생각해 Move,
+          <span
+            class="block"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+          >
+            이에 path generator를 이용해 직접 svg파일을 만들자 생각해 Move,
             Line, Arc 등 svg의 기본적인 개념을 명확하게 익히는 시간을
-            가졋습니다. 그렇게 제작을 하던 중, 부채꼴을 만드는 데 난관에
+            가졌습니다. 그렇게 제작을 하던 중, 부채꼴을 만드는 데 난관에
             봉착했습니다. Arc, line으로는 쉽게 그려지지 않았던 것입니다.
           </span>
-          <span class="block"
+          <span
+            class="block"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
             >MDN 사이트를 확인하여,
             <span class="underLine"
               >circle로 svg를 생성하고 cx, cy, r 값을 지정하면 부채꼴 모양을
               만들 수 있다</span
-            >는 것을 확인해 문제를 해결할 수 있었습니다. 이외에도 svg
-            그룹화시켜주는 g, 여러 개의 점을 연결하는 직선 polyline 등 svg에 좀
-            더 깊이있게 이해하는 시간을 가질 수 있었습니다.
+            >는 것을 확인해 문제를 해결했습니다. 이외에 svg 그룹화시켜주는 g,
+            여러 개의 점을 연결하는 직선 polyline 등 svg에 깊이 있게 이해하는
+            시간을 가질 수 있었습니다.
           </span>
         </li>
-        <li
-          class="highlight"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          SCSS로 컴파일한 css의 레이아웃이 깨진다?
+        <li class="highlightMargin">
+          <span
+            class="highlight"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom"
+            >SCSS로 컴파일한 css의 레이아웃이 깨진다?</span
+          >
         </li>
         <li
           class="lightTxt"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          대림바스 반응형 페이지 제작 중, CSS을 수정할 때 마구 쌓아둔 짐을
-          뒤지는 것처럼 복잡한 느낌이 들었습니다. 이에 SCSS를 활용해 페이지를
-          다시 제작했습니다. setting.json에 scss를 css로 자동 저장해주는 기능과
-          터미널에서 명령행으로 컴파일하는 방법도 익혔습니다.
+          반응형 페이지를 제작하다 보니, css를 수정할 때 마구 쌓아둔 짐을 뒤지는
+          것처럼 복잡한 느낌이 들었습니다. 이에 SCSS를 활용해 페이지를 다시
+          제작해보기로 했습니다. setting.json에 scss를 css로 자동 저장해주는
+          기능과 터미널에서 명령행으로 컴파일하는 방법도 익혔습니다.
           <span class="block"
             >그렇게 다시 파일을 저장했는데, 레이아웃이 깨져서 나타났습니다.
             중첩을 잘못 넣었나 싶어 SCSS파일을 다시 제작해보기도 했습니다.
-            그러던 중, container의 width값이 오류가 있는 걸 확인했습니다.
+            그러던 중, container의 width 값에 오류가 있는 걸 확인했습니다.
             띄어쓰기를 잘못하여 calc (100%- 6px)로 브라우저가 해석하지 못하는
             값을 준 것입니다.
           </span>
@@ -228,8 +243,8 @@
             >다시 기존 css를 연결하여 페이지를 열어보니
             <span class="underLine"
               >개발자 도구에서 잘못된 속성 값이라고 하여 브라우저가 값을
-              무효화된 것을 확인</span
-            >할 수 있었습니다. 개발자 도구의 유용함을 다시 한 번 깨닫는
+              무효화한 것을 확인</span
+            >할 수 있었습니다. 개발자 도구의 유용함을 다시 한번 깨닫는
             경험이었습니다.
           </span>
         </li>
@@ -240,36 +255,38 @@
         data-aos-anchor-placement="center-bottom"
       >
         <li class="grayTxt">CHALLENGE</li>
-        <li class="title">Review</li>
+        <li
+          class="title"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          Review
+        </li>
         <li class="lightTxt">
-          <span class="block"> </span>
           <span class="block"
-            >이번 페이지는 svg 애니메이션과 그리드 라인을 주제로
-            제작했습니다.레이아웃 배치가 다소 엉성한 느낌이 들어 아쉬운 감이
-            있지만 stroke-dashoffset, stroke-dasharray 등을 사용해보기도 하고,
-            SCSS, svg 제작 등 다양한 도전을 해본 페이지입니다.
+            >이번 페이지는 svg 애니메이션과 그리드 라인을 주제로 제작했습니다.
+            레이아웃 배치가 다소 엉성한 느낌이 들어 아쉬운 감이 있지만
+            stroke-dashoffset, stroke-dasharray 등을 사용해보기도 하고, SCSS,
+            svg 제작 등 다양한 도전을 해본 페이지입니다.
           </span>
 
           <span class="block"
             >그리고 이 사이트는 처음으로 SCSS를 사용해 작업하여 의미가
             있었습니다. extension 설치부터 컴파일, 중첩, mixin, 변수 사용 방법을
-            유튜브를 보며 4시간 정도만에 SCSS를 습득했습니다. css 파일을 수정할
-            때 찾는 것이 번거로울 때가 있었는데, SCSS를 사용하니 중첩의 기능이
-            너무나도 편리하게 느껴졌습니다.
+            유튜브를 보며 4시간 만에 습득했습니다. css 파일을 수정할 때 찾는
+            것이 번거로울 때가 있었는데, SCSS를 사용하니 중첩의 기능이 너무나도
+            편리하게 느껴졌습니다.
           </span>
 
           <span class="block"
             >새로운 내용이 많아 어려운 작업이었지만 그만큼 많은 공부가 된
             작업이었습니다. 이번 작업을 시작으로 SCSS의 if, 반복문 등 다량의
-            데이터에도 효율적으로 활용할 수 있도록 좀 더 깊이있게 공부할
+            데이터에도 효율적으로 활용할 수 있도록 좀 더 깊이 있게 공부할
             예정입니다.
           </span>
         </li>
       </ul>
       <ul id="viewMore">
-        <li>
-          <img src="./images/viewMore_img.png" alt="화살표" />
-        </li>
         <li>
           <a
             href="https://zeroall-h.github.io/portfolio/project5/"
@@ -280,6 +297,7 @@
         </li>
       </ul>
     </div>
+    <a class="goUp" href="#"></a>
     <article id="moveTosite">
       <h2>사이트 이동</h2>
       <ul id="project">
@@ -294,8 +312,5 @@
     <footer>
       &copy; 2022 Design & Published by Heo Da Yeong. All Rights Reserved.
     </footer>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
