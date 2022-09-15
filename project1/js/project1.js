@@ -93,7 +93,7 @@ addEventListener("scroll", () => {
         2 +
       1 +
       "px";
-  } else if (scrolled <= 0.27) {
+  } else if (scrolled < 0.27) {
     row4wrap2.style.background =
       "url(./images/brand_b0.jpg) no-repeat 50%/cover";
 
