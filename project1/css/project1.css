@@ -206,7 +206,7 @@ h3 {
 /* 네번째 페이지  */
 .row4wrap {
   width: 100%;
-  height: 860vh;
+  height: 870vh;
   position: relative;
   overflow: visible;
 }
@@ -579,7 +579,7 @@ path {
 }
 .photo15 {
   width: 100%;
-  height: 505px;
+  height: 405px;
   background-image: url(../images/photo15.png);
   bottom: 0;
   left: 0;
