@@ -93,7 +93,7 @@ addEventListener("scroll", () => {
         2 +
       1 +
       "px";
-  } else if (scrolled < 0.27) {
+  } else if (scrolled <= 0.27) {
     row4wrap2.style.background =
       "url(./images/brand_b0.jpg) no-repeat 50%/cover";
 
@@ -113,7 +113,7 @@ addEventListener("scroll", () => {
       "url(./images/logo_color.png) no-repeat 50%/12%";
   }
 });
-// 추가
+// 푸터 가로스크롤
 const container1 = document.querySelector(`.container1`);
 const stickyBox1 = document.querySelector(`.sticky_box1`);
 const horizontal1 = document.querySelector(`.horizontal1`);
@@ -132,4 +132,12 @@ addEventListener("scroll", () => {
   horizontal1.style.transform = `translateX(-${stickyBox1.offsetTop}px)`; //
 });
 
+// 메뉴
+$('#menubar').on('click', (e)=>{
+  e.preventDefault();
+  $('#menu').toggleClass("visible");
+})
+
+
 AOS.init();
+
