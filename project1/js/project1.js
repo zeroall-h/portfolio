@@ -55,15 +55,8 @@ addEventListener("scroll", () => {
     document.getElementById("logoleft").src = "./images/bottom_logo_left.png";
   }
 });
-addEventListener("scroll",()=>{
-  if(row4circle.offsetTop >= jeju.offsetTop -599){
-    row4wrap2.style.opacity = 0
-  }
 
-})
 addEventListener("scroll", () => {
- 
-
   let scrolled =
     document.documentElement.scrollTop /
     (document.documentElement.scrollHeight -
@@ -122,31 +115,38 @@ addEventListener("scroll", () => {
       "url(./images/logo_color.png) no-repeat 50%/12%";
   }
 });
-// 푸터 가로스크롤
-const container1 = document.querySelector(`.container1`);
-const stickyBox1 = document.querySelector(`.sticky_box1`);
-const horizontal1 = document.querySelector(`.horizontal1`);
-const calcHeight1 = (item) => {
-  const clientWidth1 = document.documentElement.clientWidth;
-  const clientHeight1 = document.documentElement.clientHeight;
-
-  /* horizontal의 숨겨진 영역까지의 가로 크기 (전체크기) - 브라우저 가로 크기 + 브라우저의 높이 */
-  return item.scrollWidth - clientWidth1 + clientHeight1;
-};
-
-let conHt1 = (container1.style.height = `${calcHeight1(horizontal1)}px`);
-
-// 스크롤이 될때마다 값을 받아와 가로 이동
-addEventListener("scroll", () => {
-  horizontal1.style.transform = `translateX(-${stickyBox1.offsetTop}px)`; //
-});
-
-// 메뉴
-$('#menubar').on('click', (e)=>{
-  e.preventDefault();
-  $('#menu').toggleClass("visible");
-})
 
 
-AOS.init();
+
+
+
+
+
+    // 메뉴
+    $('#menubar').on('click', (e)=>{
+    e.preventDefault();
+    $('#menu').toggleClass("visible");
+    })
+    // AOS 
+    AOS.init();
+    // 푸터 가로스크롤
+    const container1 = document.querySelector(`.container1`);
+    const stickyBox1 = document.querySelector(`.sticky_box1`);
+    const horizontal1 = document.querySelector(`.horizontal1`);
+    const calcHeight1 = (item) => {
+        const clientWidth1 = document.documentElement.clientWidth;
+        const clientHeight1 = document.documentElement.clientHeight;
+        return item.scrollWidth - clientWidth1 + clientHeight1;
+    };
+    let conHt1 = (container1.style.height = `${calcHeight1(horizontal1)}px`);
+
+    // 스크롤이 될때마다 값을 받아와 가로 이동
+    addEventListener("scroll", () => {
+        if(scrollY > container1.offsetTop) {
+            $('.boxrow1').css({transform : 'scale(1)'})
+        } else {
+            $('.boxrow1').css({transform : 'scale(0.6)'})
+        }
+    horizontal1.style.transform = `translateX(-${stickyBox1.offsetTop}px)`; //
+    });
 
