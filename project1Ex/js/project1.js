@@ -55,12 +55,7 @@ addEventListener("scroll", () => {
     document.getElementById("logoleft").src = "./images/bottom_logo_left.png";
   }
 });
-addEventListener("scroll",()=>{
-  if(row4circle.offsetTop >= jeju.offsetTop -599){
-    row4wrap2.style.opacity = 0
-  }
 
-})
 addEventListener("scroll", () => {
  
 
