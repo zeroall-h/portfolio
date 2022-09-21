@@ -759,3 +759,6 @@ font-size: 1.5rem;
 color: #fff;
 background-color: #000;
 }
+.contentBoxTitle{
+  text-indent: -9999px;
+}
